@@ -5,9 +5,14 @@ import gradio as gr
 from agent.agent import FootballAgent
 
 class FootballAgentUI:
-    def __init__(self):
-        """Initialize the Football Agent UI."""
-        self.agent = FootballAgent()
+    def __init__(self, context_limit=10):
+        """
+        Initialize the Football Agent UI.
+        
+        Args:
+            context_limit (int, optional): Maximum number of messages in context. Defaults to 10.
+        """
+        self.agent = FootballAgent(context_limit=context_limit)
         
     def chat(self, message, history):
         """
@@ -64,8 +69,13 @@ class FootballAgentUI:
         return interface.launch(share=True, inbrowser=True)
 
 
-def start_ui():
-    """Start the Football Agent UI."""
-    ui = FootballAgentUI()
+def start_ui(context_limit=10):
+    """
+    Start the Football Agent UI.
+    
+    Args:
+        context_limit (int, optional): Maximum number of messages in context. Defaults to 10.
+    """
+    ui = FootballAgentUI(context_limit=context_limit)
     ui.launch()
 
