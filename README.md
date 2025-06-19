@@ -45,7 +45,7 @@ The Football Agent uses a sophisticated message modeling system:
 
 3. Run the application:
    ```
-   Make sure redis is running and properly configurated
+   Make sure redis is running and properly configured
    python main.py
    Find the ui at: http://127.0.0.1:7860/
    ```

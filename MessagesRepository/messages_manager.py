@@ -97,8 +97,6 @@ class MessagesManager:
         limited_other_messages = other_messages[-(self.context_limit - len(system_messages)):]
         
         context_messages = system_messages + limited_other_messages
-
-        print(f"Context messages: {[msg.to_openai_format() for msg in context_messages]}")
         
         # Convert to OpenAI format
         return [msg.to_openai_format() for msg in context_messages]
