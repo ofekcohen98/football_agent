@@ -27,7 +27,7 @@ def get_image_data_url():
 bg_image_url = get_image_data_url()
 FOOTBALL_CSS = f"""
 .football-chat-container {{
-    background-image: url('{bg_image_url}');
+    {"background-image: url('" + bg_image_url + "');" if bg_image_url else "background-color: #f0f0f0;"}
     background-size: cover;
     background-position: center;
     border-radius: 10px;
