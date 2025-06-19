@@ -3,3 +3,4 @@ python-dotenv
 gradio
 redis
 redis[hiredis]
+openai-agents
